@@ -239,7 +239,7 @@
           wrapRc = true;
           # IMPORTANT:
           # your alias may not conflict with your other packages.
-          aliases = [ "vim" ];
+          aliases = [ "vim" "vi" ];
           # neovim-unwrapped = inputs.neovim-nightly-overlay.packages.${pkgs.system}.neovim;
           hosts.python3.enable = true;
           hosts.node.enable = true;
@@ -264,24 +264,24 @@
           kickstart-gitsigns = true;
 
           # we can pass whatever we want actually.
-          have_nerd_font = false;
+          have_nerd_font = true;
 
-          example = {
-            youCan = "add more than just booleans";
-            toThisSet = [
-              "and the contents of this categories set"
-              "will be accessible to your lua with"
-              "nixCats('path.to.value')"
-              "see :help nixCats"
-              "and type :NixCats to see the categories set in nvim"
-            ];
-          };
+          # example = {
+          #   youCan = "add more than just booleans";
+          #   toThisSet = [
+          #     "and the contents of this categories set"
+          #     "will be accessible to your lua with"
+          #     "nixCats('path.to.value')"
+          #     "see :help nixCats"
+          #     "and type :NixCats to see the categories set in nvim"
+          #   ];
+          # };
         };
       };
     };
   # In this section, the main thing you will need to do is change the default package name
   # to the name of the packageDefinitions entry you wish to use as the default.
-    defaultPackageName = "nvim";
+    defaultPackageName = "nvim-pkg";
   in
 
 
