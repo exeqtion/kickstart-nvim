@@ -93,7 +93,7 @@
       # this includes LSPs
       lspsAndRuntimeDeps = with pkgs; {
         general = [
-          libclang
+          clang-tools
           universal-ctags
           ripgrep
           fd
