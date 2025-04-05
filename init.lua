@@ -107,7 +107,7 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 -- NOTE: nixCats: we asked nix if we have it instead of setting it here.
 -- because nix is more likely to know if we have a nerd font or not.
-vim.g.have_nerd_font = nixCats("have_nerd_font")
+vim.g.have_nerd_font = nixCats 'have_nerd_font'
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -644,7 +644,7 @@ require('nixCatsUtils.lazyCat').setup(nixCats.pawsible { 'allPlugins', 'start', 
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       -- NOTE: nixCats: there is help in nixCats for lsps at `:h nixCats.LSPs` and also `:h nixCats.luaUtils`
       local servers = {}
-      -- servers.clangd = {},
+      servers.clangd = {}
       -- servers.gopls = {},
       -- servers.pyright = {},
       -- servers.rust_analyzer = {},
@@ -666,7 +666,6 @@ require('nixCatsUtils.lazyCat').setup(nixCats.pawsible { 'allPlugins', 'start', 
         servers.rnix = {}
         servers.nil_ls = {}
       end
-      servers.clangd {}
       servers.lua_ls = {
         -- cmd = {...},
         -- filetypes = { ...},
