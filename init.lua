@@ -666,10 +666,7 @@ require('nixCatsUtils.lazyCat').setup(nixCats.pawsible { 'allPlugins', 'start', 
         servers.rnix = {}
         servers.nil_ls = {}
       end
-      servers.clangd = {
-        cmd = { 'clangd' },
-        fletypes = { 'c' },
-      }
+      servers.clangd {}
       servers.lua_ls = {
         -- cmd = {...},
         -- filetypes = { ...},
